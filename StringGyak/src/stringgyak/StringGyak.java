@@ -40,11 +40,11 @@ public class StringGyak {
     }
 }
 
-//1szoveg.lenght
-//2szoveg.startsWith / indexOf
-//3
-//4szoveg.contains("lúd")
-//5szoveg.indexOf
-//6szoveg.repclace("lúd", "veréb")
+//1 szoveg.lenght
+//2 szoveg.startsWith / indexOf
+//3 
+//4 szoveg.contains("lúd")
+//5 szoveg.indexOf
+//6 szoveg.repclace("lúd", "veréb")
 //7
 
