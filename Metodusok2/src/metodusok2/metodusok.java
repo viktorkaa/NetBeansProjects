@@ -29,12 +29,10 @@ public class metodusok {
     //*   Feladat     *
     //*****************
 
-    
-        
-            public static void abra() {
+    public static void abra() {
 
-    {
-        System.out.println("*****************");
+        {
+            System.out.println("*****************");
             System.out.println("*    Feladat    *");
             System.out.println("*****************");
 
@@ -44,14 +42,15 @@ public class metodusok {
         //tartomány alsó határa,a nagyobbik a felső.
         //a) Generáltassuk a tartományból egy random számot.
         //b) Hozzunk létre a függvény segítségével egy 20 elemű tömböt.
-        {
-            Scanner in = new Scanner(System.in);
-            System.out.print("Adja meg az első számot : ");
-            int max = 20;
-            System.out.print("Adja meg a második számot : ");
-            int min = 1;
-        }
-        Random randomNum = new Random();
-        int showMe = min + randomNum.nextInt(max);
-        System.out.println(showMe);
+    public static int szamok(int max, int min) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Adja meg az első számot : ");
+        int max = 20;
+        System.out.print("Adja meg a második számot : ");
+        int min = 1;
     }
+    Random randomNum = new Random();
+    int showMe = min + randomNum.nextInt(max);
+
+    System.out.println (showMe);
+}
