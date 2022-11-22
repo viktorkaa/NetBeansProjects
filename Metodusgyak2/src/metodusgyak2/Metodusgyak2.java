@@ -6,7 +6,7 @@
 package metodusgyak2;
 
 import java.util.Scanner;
-
+import java.io.*;
 /**
  *
  * @author user3
@@ -55,16 +55,26 @@ public class Metodusgyak2 {
 //5. Visszaadja hány szó van egy stringbnen
 //6. A 3 kapott paraméterről eldönti, hogy növekvő sorban vannak-e.
 
-    public static int novekvo(int szamok[], int n) {
+    public static boolean novekvo(int szamok[], int n) { //booelean
         if (n == 1 || n == 0) {
-            return 1;
+            return true;
         }
         if (szamok[n - 1] < szamok[n - 2]) {
-            return 0;
+            return false;
         }
         return novekvo(szamok, n - 1);
     }
+//7. Vissza adja a számok összegét
+    
+    public static int osszege(int n){
+        int atlag = 0;
+        while (n != 0){
+            atlag = atlag +n % 10;
+            n = n/10;
+        }
+        return atlag;
 
+    }
     /**
      * @param args the command line arguments
      */
@@ -96,7 +106,7 @@ public class Metodusgyak2 {
         System.out.println("------Negyedik feladat------");
         System.out.println("Adjon meg egy tetszőleges szót: ");
 
-        int szamok[] = {2, 45, 3};
+        int szamok[] = {3, 4, 1};
         int n = szamok.length;
         if (novekvo(szamok, n) != 0) {
          
@@ -104,6 +114,7 @@ public class Metodusgyak2 {
         } else {
             System.out.println("Nem");
         }
-
+   
     }
 }
+
