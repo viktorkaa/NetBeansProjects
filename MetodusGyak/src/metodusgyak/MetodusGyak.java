@@ -13,43 +13,25 @@ import java.util.Scanner;
  */
 public class MetodusGyak {
 
-    static final int OUT = 0;
-    static final int IN = 1;
-
-    // returns number of words in str
-    static int countWords(String str) {
-        int state = OUT;
-        int wc = 0;  // word count
-        int i = 0;
-
-        // Scan all characters one by one
-        while (i < str.length()) {
-            // If next character is a separator, set the
-            // state as OUT
-            if (str.charAt(i) == ' ' || str.charAt(i) == '\n'
-                    || str.charAt(i) == '\t') {
-                state = OUT;
-            } // If next character is not a word separator
-            // and state is OUT, then set the state as IN
-            // and increment word count
-            else if (state == OUT) {
-                state = IN;
-                ++wc;
-            }
-
-            // Move to next character
-            ++i;
-        }
-        return wc;
-    }
-
-    // Driver program to test above functions
+    static int wordcount(String string)  
+        {  
+          int count=0;  
+      
+            char ch[]= new char[string.length()];     
+            for(int i=0;i<string.length();i++)  
+            {  
+                ch[i]= string.charAt(i);  
+                if( ((i>0)&&(ch[i]!=' ')&&(ch[i-1]==' ')) || ((ch[0]!=' ')&&(i==0)) )  
+                    count++;  
+            }  
+            return count;  
+        }  
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Három szám közül visszaadja a legkissebbet.
-        //Visszaadja egy string középső értékét (1 vagy 2 középső karakter lehet)
+    
         int a = 20;
         int b = 10;
         int c = 30;
@@ -72,9 +54,9 @@ public class MetodusGyak {
 
         System.out.println(legkissebb + " A legkissebb.");
 
-//Visszaadja egy string magánhangzóinak számát.
+
         int szam = 0;
-        String str = "Adjon meg egy mondatot";
+        System.out.println ("Adjon meg egy mondatot");
         Scanner sc = new Scanner(System.in);
         String mondat = sc.nextLine();
 
@@ -84,10 +66,11 @@ public class MetodusGyak {
                 szam++;
 
                 System.out.println("Az ön mondatában található magánhangzók száma: " + szam);
-                System.out.println("Az ön mondatában található magánhangzók száma: " + countWords(str));
+                
             }
+           
 
-            //Visszaadja, hány szó van egy stringben
+            
         }
     }
 }
