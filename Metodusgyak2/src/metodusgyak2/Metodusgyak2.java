@@ -73,8 +73,8 @@ public class Metodusgyak2 {
             n = n/10;
         }
         return atlag;
-
     }
+//8. Kiírja a karaktereket 2 megadott karakter között. (angol abc)
     /**
      * @param args the command line arguments
      */
@@ -106,15 +106,12 @@ public class Metodusgyak2 {
         System.out.println("------Negyedik feladat------");
         System.out.println("Adjon meg egy tetszőleges szót: ");
 
-        int szamok[] = {3, 4, 1};
-        int n = szamok.length;
-        if (novekvo(szamok, n) != 0) {
+        //int szamok[] = {3, 4, 1};
+        //int n = szamok.length;
+        //System.out.println(novekvo);
          
-            System.out.println("Igen");
-        } else {
-            System.out.println("Nem");
         }
    
     }
-}
+
 
