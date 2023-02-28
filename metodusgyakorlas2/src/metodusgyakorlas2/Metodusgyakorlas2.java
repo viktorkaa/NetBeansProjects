@@ -35,6 +35,7 @@ public class Metodusgyakorlas2 {
         int kozepso_2 = x + y + z - max - min;
         return (kozepso_1 == kozepso_2);
     }
+
     //Ami egy n számot kap paraméterként, 
     //és kiír egy n x n-es mátrixot véletlen 0 ill. 1 számjegyekből.
     public static void matrix(int n) {
