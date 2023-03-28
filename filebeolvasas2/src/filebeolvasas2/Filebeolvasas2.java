@@ -6,7 +6,7 @@
 package filebeolvasas2;
 
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -29,7 +29,7 @@ public class Filebeolvasas2 {
                 szam += scanner.nextInt();
             }
             System.out.println("Az összeg: " + szam);
-        } catch (FileNotFoundException e) {
+        } catch (IOException e) {
             System.out.println("HIBA! a fájl nem található.");
         }
         
