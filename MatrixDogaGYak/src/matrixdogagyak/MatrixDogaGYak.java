@@ -14,9 +14,7 @@ public class MatrixDogaGYak {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
+    
     public static void kiirasMatrix(int[][] matrix) {
         int sor = matrix.length;
         int oszlop = matrix[0].length;
@@ -84,6 +82,7 @@ public class MatrixDogaGYak {
             }
         }
     }
+
     
     /**
      * @param args the command line arguments

@@ -10,5 +10,9 @@ package feb.pkg28.gyakorlás.dolgozatra;
  * @author user3
  */
 class Matrix {
+
+    void randomSzámokFeltöltése() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
