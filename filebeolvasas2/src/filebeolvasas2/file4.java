@@ -5,10 +5,10 @@
  */
 package filebeolvasas2;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.io.RandomAccessFile;
 
 /**
  *
@@ -16,26 +16,31 @@ import java.util.Scanner;
  */
 public class file4 {
     public static void main(String[] args) {
-        ArrayList<String> adatok = new ArrayList<String>();
-        
-         ArrayList<String> dataList = new ArrayList<>();
-
+        RandomAccessFile raf;
+        String sor;
+        String[] nevek = new String[5];
+        int osszeg = 0;
+        ArrayList<Integer> szamok = new ArrayList<>();
         try {
-            File file = new File("adat1.txt");
-            Scanner scanner = new Scanner(file);
-
-            while (scanner.hasNextLine()) {
-                String data = scanner.nextLine();
-                dataList.add(data);
+            raf = new RandomAccessFile("adat1.txt", "r");
+            sor = raf.readLine();  
+            while (sor != null) {  
+                szamok.add(Integer.parseInt(sor.strip()));
+                             
+                sor = raf.readLine();
             }
 
-            scanner.close();
-        } catch (IOException e) {
-            System.out.println("HIBA! a fájl nem található.");
-            e.printStackTrace();
-        }
+            raf.close();
 
-        System.out.println(dataList);
+        } catch (IOException e) {
+            System.err.println("HIBA! a fájl nem található.");
+        }
+        for (int i = 0; i < szamok.size(); i++) {
+            System.out.println(szamok.get(i) + " ");
+
+        }
+       
     }
+   
 }
 
